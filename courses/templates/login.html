@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load courses_custom_tag %}
+
+{% block title%} Login {% endblock%}
+
+{% block content %}
+<br>
+    <div class="container">
+        <form action="" method='POST'>
+        {% csrf_token %}
+            {{form.as_p}}
+            <button type="Submint" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+{% endblock%}

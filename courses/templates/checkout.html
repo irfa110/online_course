@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load courses_custom_tag %}
+
+{% block title%} Checkout {% endblock%}
+
+{% block content %}
+<br>
+    <div class="container">
+        <h1>you are now going to enroll {{course.name}}</h1>
+        <form action="" method='POST'>
+        {% csrf_token %}
+            <button type="Submint" class="btn btn-primary">Checkout</button>
+        </form>
+    </div>
+{% endblock%}
